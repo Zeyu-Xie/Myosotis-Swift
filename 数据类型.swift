@@ -13,6 +13,10 @@ let e: Bool = true
 let f: Bool = false
 print(e, f)
 
+print("字符类型")
+let n: Character = "s"
+print(n)
+
 print("字符串类型")
 let g: String = "Here comes a Genius!"
 print(g)
@@ -42,4 +46,4 @@ print(k)
 print("可选类型")
 let l: Int? = 5
 let m: Int? = nil
-print(l, m)
+print(l ?? 0, m ?? 0)
