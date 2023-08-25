@@ -78,3 +78,21 @@ let motor = Motor()
 let bicycle = Bicycle()
 motor.startEngine()
 bicycle.startEngine()
+
+print("扩展")
+
+protocol CanFly {
+    func fly()
+}
+
+extension CanFly {
+    func fly() {
+        print("Something is flying. ")
+    }
+}
+
+struct Bird: CanFly {
+}
+
+var bird = Bird()
+bird.fly()
