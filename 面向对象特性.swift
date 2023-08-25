@@ -46,3 +46,35 @@ struct Car {
 
 var myCar = Car(label: "Volvo", price: 300000)
 myCar.introduce()
+
+print("协议")
+
+protocol Vehicle {
+    var numberOfWheels: Int { get }
+    func startEngine()
+}
+
+struct Motor: Vehicle {
+    var numberOfWheels: Int {
+        return 3
+    }
+
+    func startEngine() {
+        print("Motor engine started. ")
+    }
+}
+
+struct Bicycle: Vehicle {
+    var numberOfWheels: Int {
+        return 2
+    }
+
+    func startEngine() {
+        print("Bicycle doesn't have an engine. ")
+    }
+}
+
+let motor = Motor()
+let bicycle = Bicycle()
+motor.startEngine()
+bicycle.startEngine()
